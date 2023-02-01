@@ -36,7 +36,7 @@ bool StatBoosterRerollPlayerScript::CanCastItemUseSpell(Player* player, Item* it
 
         uint32 visualId = sConfigMgr->GetOption<uint32>("StatBoostReroll.VisualId", 62015);
         player->CastSpell(player, visualId);
-        player->HandleEmoteCommand(EMOTE_ONESHOT_LOOT);
+        //player->HandleEmoteCommand(EMOTE_ONESHOT_LOOT);
     }
     else
     {
