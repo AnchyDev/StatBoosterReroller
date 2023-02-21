@@ -23,3 +23,13 @@ StatBoostReroll.Enable = 0
 #
 
 StatBoostReroll.VisualId = 62015
+
+#
+#    StatBoostReroll.AllowOwnedItemsOnly
+#        Description: Enable/disable the re-rolling of owned items only.
+#        Note: This avoids players being able to re-roll other players items.
+#                     0 - Disabled
+#        Default:     1 - Enabled
+#
+
+StatBoostReroll.AllowOwnedItemsOnly = 1

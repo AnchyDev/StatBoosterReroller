@@ -30,6 +30,13 @@ bool StatBoosterRerollPlayerScript::CanCastItemUseSpell(Player* player, Item* it
         return false;
     }
 
+    if (sConfigMgr->GetOption<bool>("StatBoostReroll.AllowOwnedItemsOnly", true) &&
+        targetItem->GetOwner()->GetGUID() != player->GetGUID())
+    {
+        ChatHandler(player->GetSession()).SendSysMessage("You cannot re-roll items other than your own.");
+        return false;
+    }
+
     if (StatBoostMgr::BoostItem(player, targetItem, 100))
     {
         player->DestroyItemCount(itemTemplate->ItemId, 1, true);
